@@ -8,7 +8,7 @@ function EventCard(props) {
             <p>Location: {props.location}</p>
             <button onClick={() => props.onToggleBooking(props.id)}>
                 {/* condition ? valueIfTrue : valueIfFalse */}
-                {props.booked ? "View Booking" : "Book Meeting"}
+                {props.booked ? "Cancel Booking" : "Book Meeting"}
             </button>
             <button onClick={() => props.onDelete(props.id)}> Delete</button>
         </div>
