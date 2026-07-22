@@ -8,3 +8,5 @@ function EventCard() {
         </div>
     );
 }
+
+export default EventCard;
