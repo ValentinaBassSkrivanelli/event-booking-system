@@ -1,41 +1,16 @@
-# Event Booking System
+# React + Vite
 
-## Overview
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This project consists of developing an Event Booking System using React. The application allows users to browse available events, create new events, register for events, cancel registrations, and manage reservations through an interactive web interface.
+Currently, two official plugins are available:
 
-The software is designed to demonstrate modern web development concepts by building a single-page application with reusable React components, dynamic user interaction, and persistent data storage using LocalStorage.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-My purpose in creating this software is to strengthen my skills in front-end web development by learning React, component-based architecture, state management, and client-side data persistence while building a practical and interactive application.
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Development Environment
+## Expanding the ESLint configuration
 
-The software was developed using the following tools:
-
-- Visual Studio Code
-- Node.js
-- Vite
-- React
-- Git
-- GitHub
-
-The application was built using:
-
-- JavaScript
-- JSX
-- HTML
-- CSS
-
-LocalStorage is used to persist event and reservation data between browser sessions.
-
----
-
-## Useful Websites
-
-- React Documentation: https://react.dev
-- Vite Documentation: https://vitejs.dev
-- MDN Web Docs (JavaScript): https://developer.mozilla.org/en-US/docs/Web/JavaScript
-- W3Schools React Tutorial: https://www.w3schools.com/react/
-test
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
