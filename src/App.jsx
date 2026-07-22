@@ -36,7 +36,7 @@ function App() {
   return (
     <>
       <Header />
-      <BookingForm onAddEvent={addEvent} />
+       <BookingForm addEvent={addEvent} />
       {/* Iterate through the events array and create an EventCard for each event */}
       {events.map((event) => (
         <EventCard
