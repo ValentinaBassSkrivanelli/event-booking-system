@@ -1,14 +1,30 @@
 import { useState } from "react";
 
-function BookingForm() {
+function BookingForm({ addEvent }) {
 
     const [title, setTitle] = useState("");
     const [date, setDate] = useState("");
     const [location, setLocation] = useState("");
 
+        function handleSubmit(event) {
+
+        event.preventDefault();
+
+        addEvent({
+            title,
+            date,
+            location
+        });
+
+        setTitle("");
+        setDate("");
+        setLocation("");
+    }
+
+    
     return (
 
-        <form>
+        <form onSubmit={handleSubmit}>
 
             <h2>Add New Event</h2>
 
@@ -39,7 +55,7 @@ function BookingForm() {
 
             <br /><br />
 
-            <button>Add Event</button>
+            <button type="submit">Add Event</button>
 
         </form>
 

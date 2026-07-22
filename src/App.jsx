@@ -5,7 +5,7 @@ import BookingForm from "./components/BookingForm";
 
 function App() {
    //creating the event cards for the events using props
-  const events = [events, setEvents] = useState([
+  const [events, setEvents] = useState([
     {
       id: 1,
       title: "1.1 MSA",
@@ -26,23 +26,27 @@ function App() {
     }
   ]);
   
+  function addEvent(newEvent) {
+    const event = {
+      id: events.length + 1,
+      ...newEvent
+    };
+    setEvents([...events, event]);
+  }
   return (
     <>
-    <Header />
-    <BookingForm />
-    //"Iterate through the events array and, for each element, create an EventCard component."
-
-    {events.map((event) => (
-      <EventCard
-      key={event.id}
-      title={event.title}
-      date={event.date}
-      location={event.location}
-      />
-
-    ))}
-
-  </>
+      <Header />
+      <BookingForm onAddEvent={addEvent} />
+      {/* Iterate through the events array and create an EventCard for each event */}
+      {events.map((event) => (
+        <EventCard
+          key={event.id}
+          title={event.title}
+          date={event.date}
+          location={event.location}
+        />
+      ))}
+    </>
   );
 }
 
