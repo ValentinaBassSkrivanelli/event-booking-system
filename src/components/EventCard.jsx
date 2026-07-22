@@ -1,11 +1,15 @@
+//creating a new component called EventCard
+
 function EventCard() { 
     return (
         <div className="event-card">
-            <h2>1.1 MSA</h2>    
-            <p>Date: July 30, 2026</p>
-            <p>Location: Remote - Teams</p>
+            <h2>{props.title}</h2>    
+            <p>Date: {props.date}</p>
+            <p>Location: {props.location}</p>
             <button>Book Meeting</button>
         </div>
+
+        
     );
 }
 
